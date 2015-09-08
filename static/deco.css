@@ -1,0 +1,111 @@
+/** CSS Page **/
+html { overflow: hidden; }
+html, body { width: 100%; height: 100%; margin: 0; padding: 0; }
+
+#nav {
+      width: 100%;
+      float: left;
+      margin: 0 0 3em 0;
+      padding: 0;
+      list-style: none;
+      background-color: #f2f2f2;
+      border-bottom: 1px solid #ccc; 
+      border-top: 1px solid #ccc; }
+#nav li {
+      float: left; }
+#nav li a {
+      display: block;
+      padding: 8px 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #069;
+      border-right: 1px solid #ccc; }
+#nav li a:hover {
+      color: #c00;
+      background-color: #fff; }
+
+.label {
+width:900px;
+background:#fff;
+margin:30px;
+padding:0 10px;
+border:1px solid #ccc;
+}
+.label p {
+line-height:1.5em;
+margin-bottom:10px;
+font-family: 'Arimo', Verdana;
+font-size:.875em;
+color:#333;
+}
+h2.label1{
+display: inline-block; 
+padding:5px 20px 5px 10px;
+font-family: 'Metrophobic', Arial;
+color: #999;
+font-size:1.1em;
+text-transform: uppercase;
+letter-spacing: 0.1em; 
+word-spacing: 5px; 
+text-shadow: 0px 1px 0px #282828;
+-webkit-box-shadow: rgba(51, 51, 51, .75) 0 0 5px;
+-moz-box-shadow: rgba(51, 51, 51, .75) 0 0 5px;
+box-shadow: rgba(51, 51, 51, .75) 0 0 5px;
+behavior: url(pie/PIE.htc);
+}
+
+/**ORANGE HEADING**/
+h2.label1{
+background:#eee;
+border: 1px solid #666; 
+margin:-20px 0 15px -20px; 
+-webkit-transform:rotate(-2deg);
+-moz-transform: rotate(-2deg);
+-o-transform: rotate(-2deg);
+-ms-transform: rotate(-2deg);
+transform: rotate(-2deg);
+-webkit-backface-visibility: hidden; 
+}
+
+.red {
+	background-color: #ff0000;
+	border: 1px solid #ff0000;
+}
+.green {
+	background-color: #6b6dbb;
+	border: 1px solid #6b6dbb;
+}
+.red:hover {
+	background:#c20b0b;
+	border:1px solid #c20b0b;
+}
+.green:hover {
+	background:#494b99;
+	border:1px solid #494b99;
+}
+
+input.circleBtn {
+width:100px; 
+height:100px;
+font-color:#fff;
+font-size:1.6em;
+-webkit-border-radius: 50px;
+-moz-border-radius: 50px;
+border-radius: 50px;
+-webkit-box-shadow: 0 0 10px rgba(0,0,0, .75);
+-moz-box-shadow: 0 0 10px rgba(0,0,0, .75);
+box-shadow: 2px 2px 15px rgba(0,0,0, .75);
+}
+input.circleBtn:hover {
+-webkit-box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+-moz-box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+box-shadow: 0px 0px 5px rgba(0,0,0, .75);
+}
+
+div.Footer {
+ 	overflow: hidden;
+ 	position: absolute;
+ 	bottom: 0; 
+ 	height: 50px; width:100%; text-align: center;
+ 	margin-left:0px; margin-bottom:-1px;
+  }

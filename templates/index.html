@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>**Drawing Card Game**</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link type="text/css" rel="stylesheet" href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function removeCard() {
+			var checked = $("input[name=cardId]:checked");
+			if (checked.length != 1) {
+				alert('Sorry,you can choose Only One.');
+			} else {
+				if (confirm('Are you sure you want remove?')) {
+					location.href = '/remove?id=' + checked.val();
+				}
+			}
+		}
+
+		function composeCard() {
+			var checked = $("input[name=cardId]:checked")
+			if (checked.length != 2) {
+				alert('Sorry, you can choose Only Two');
+			} else {
+				if (confirm('Are you sure you want compose?')) {
+					location.href = '/compose?' + checked.serialize();
+				}
+			}
+		}
+
+		function removeOne(id) {
+			if (confirm('Are you sure you want remove?')) {
+				location.href = '/remove?id=' + id;
+			} 
+		}
+	</script>
+</head>
+<body>
+<div class="container">
+<ul class="nav nav-tabs">
+	<li class="active"><a href="/">Home</a></li>
+	<li><a href="/draw">Drawing Cards</a></li>
+</ul>
+<div class="row">
+	<div class="span4">
+		<table class="table table-hover">
+			<tr> 
+				<td>Level</td>
+				<td>Total items</td>
+				<td>Total Strikingpower</td>
+			</tr>
+			{% for level in total %}
+			<tr>
+				<td>{{ level }}</td>
+				<td>{{ total[level].count }}</td>
+				<td>{{ total[level].strength }}</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+	<form>
+	<div class="span5">
+		<div class="row">
+			<div class="span5">
+				{% with messages = get_flashed_messages() %}
+				  {% if messages %}
+				    {% for message in messages %}
+				      <div class="alert alert-danger">{{ message }}</div>
+				    {% endfor %}
+				  {% endif %}
+				{% endwith %}
+				<a onclick="removeCard()" class="btn btn-danger">Remove</a>
+				<a onclick="composeCard()" class="btn btn-success">Compose</a>
+			</div>
+		</div>
+		<br />
+		<div class="row">
+			<div class="span5">
+				<table class="table table-striped">
+					<tr>
+						<td></td>
+						<td>No.</td>
+						<td>Level</td>
+						<td>Strength</td>
+					</tr>
+					{% for card in cards %}
+					<tr>
+						<td><input type="checkbox" name="cardId" value="{{ card._id }}" /></td>
+						<td>{{ loop.index }}</td>
+						<td>{{ card.level }}</td>
+						<td>{{ card.strength }}</td>
+					</tr>
+					{% endfor %}
+				</table>
+			</div>
+		</div>
+	</div>
+</form>
+</div>
+</div>
+</body>
+</html>

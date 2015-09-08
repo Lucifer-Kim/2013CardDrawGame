@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>**Composing Card**</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link type="text/css" rel="stylesheet" href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" />
+</head>
+<body>
+<div class="container">
+<ul class="nav nav-tabs">
+	<li><a href="/">Home</a></li>
+	<li><a href="/draw">Drawing Cards</a></li>
+	<li class="active"><a>Composing Cards</a></li>
+</ul>
+<div class="label">
+<div class="row">
+<div class="span5">
+	<h2 class="label1"></h2>
+	{% if card is defined %}
+	<p>New Card is {{ card.level }} : {{ card.strength }}</p>
+	{% else %}
+	<p></p>
+	{% endif %}
+</div></div></div>
+</div>
+</body>
+</html>
