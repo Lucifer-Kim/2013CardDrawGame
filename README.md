@@ -12,10 +12,21 @@ Requirements
 
 Install
 ==============
+    $ virtualenv venv
+    $ source venv/bin/activate
     $ sudo pip install Flask
     $ brew install mongodb
     $ pip install pymongo==2.8
-    $ pip install Flask-MongoKit
+    $ sudo pip install Flask-MongoKit
+
+How To Run
+==============
+MongoDB Server를 올리기 위해 최상위 디렉토리에서 폴더를 만들어준다.
+
+     $ sudo mkdir data
+     $ sudo mkdir data/db
+     $ mongod
+     $ python manage.py runserver
 
 
 
