@@ -14,10 +14,10 @@ Install
 ==============
     $ virtualenv venv
     $ source venv/bin/activate
-    $ sudo pip install Flask
+    $ pip install Flask
     $ brew install mongodb
     $ pip install pymongo==2.8
-    $ sudo pip install Flask-MongoKit
+    $ pip install Flask-MongoKit
 
 How To Run
 ==============
